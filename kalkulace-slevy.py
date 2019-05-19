@@ -1,4 +1,5 @@
 
+
 def strToFloatPrice(n):
     """
     Prevede cislo ze stringu do float a provede zmenu desetinne carky na tecku.
@@ -17,15 +18,14 @@ def strToFloatPrice(n):
 def getPrice():
     cena = 0.0
     cenaCLR = 0.0
-    cenaSTR = input("zadej cenu:").strip()
     cena = strToFloatPrice(cenaSTR)
+    cenaSTR = input("zadej cenu:").strip()
     return cena
 
+
 def getDiscount():
-    sleva = 0.0
     slevaSTR = 0.0
     slevaSTR = input("zadej slevu v procentech:").strip()
-    print(slevaSTR)
     slevaFL = float(slevaSTR)
     return slevaFL
 
@@ -33,7 +33,8 @@ def spocitejSlevu():
     cena = getPrice()
     sleva = getDiscount()
     poSleve = (cena * ((100-sleva)*0.01))
-    sdeleni = "částka {}Kč po slevě ve výši {}% je {}Kč".format(cena, round(sleva), poSleve)
+    sdeleni = "částka {}Kč po {}% slevě je {}Kč".format(cena, round(sleva), poSleve)
     print(sdeleni)
 
 spocitejSlevu()
+

@@ -1,0 +1,15 @@
+<component name="InspectionProjectProfileManager">
+  <settings>
+    <info color="806a00">
+      <option name="FOREGROUND" value="f4ff00" />
+      <option name="BACKGROUND" value="282614" />
+      <option name="ERROR_STRIPE_COLOR" value="806a00" />
+      <option name="myName" value="UNUSED" />
+      <option name="myVal" value="50" />
+      <option name="myExternalName" value="UNUSED" />
+      <option name="myDefaultAttributes">
+        <option name="ERROR_STRIPE_COLOR" value="806a00" />
+      </option>
+    </info>
+  </settings>
+</component>
