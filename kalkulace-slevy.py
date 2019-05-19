@@ -1,4 +1,5 @@
 slevaSTR = 0
+mena = "Kč"
 
 def strToFloatPrice(n):
     """
@@ -23,7 +24,14 @@ def getPrice():
     """
     cenaSTR = 0.0
     cenaSTR = input("zadej cenu:").strip()
-    cenaSTR = float(cenaSTR)
+    if not cenaSTR:              # přidá výchozí hodnotu
+        cenaSTR = 0.0
+    else:
+        try:
+           cenaSTR = float(cenaSTR) # convert string input to float
+        except(ValueError):
+            print("chybné zadání!")
+            exit()
     return cenaSTR
 
 
@@ -34,18 +42,25 @@ def getDiscount():
     """
     slevaSTR = 0.0
     slevaSTR = input("zadej slevu v procentech:").strip()
-    slevaFL = float(slevaSTR)
+    try:
+        slevaFL = float(slevaSTR)
+    except(ValueError):
+        print("Chybné zadání!")
+        exit()
     return slevaFL
 
 
 def spocitejSlevu():
+    """
+    výpočet konečné slevy
+    :return:
+    """
     cena = getPrice()           # získej cenu produktu od uživatele
     sleva = getDiscount()       # získej výši slevy od uživatele
-    vyse_slevy = cena - sleva   # sleva vyšíslena v měně
-    poSleve = (cena * ((100-sleva)*0.01))
-    sdeleni = "částka {}Kč po {}% slevě je {}Kč".format(cena, sleva, round(poSleve,2))
-
-
+    vyse_slevy = 0.0
+    cena_po_sleve = (cena * ((100 - sleva) * 0.01))
+    vyse_slevy = round(cena - cena_po_sleve, 2)
+    sdeleni = "částka {} {} po {}% slevě je {} {}".format(cena, mena, sleva, round(cena_po_sleve, 2), mena)
     print(sdeleni)
     print("Zlevněno o ", vyse_slevy)
 
