@@ -27,13 +27,6 @@ x = [n*12 for n in range(5,10)]
 print(x)
 
 
-# zip
-jmena=["Pavel","Lukáš","Robert"]
-cisla=[2,4,6]
-z=dict(zip(cisla,jmena))
-print(z)
-
-
 cisla = [5,10,33,55]
 
 def double(c):
