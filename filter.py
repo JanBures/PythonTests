@@ -6,9 +6,8 @@ print(nums)
 
 
 """
-filtr 
+filter 
 """
 # filter out nums >=0
 f = list(filter(lambda x:x<=0, nums))
-
 print(f)
