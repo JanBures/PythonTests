@@ -7,7 +7,6 @@ z=dict(zip(cisla,jmena))
 print(z)
 
 
-
 #výpis obsahu slovníku
 for key in z:
     res = "Klíč: {} \t Hodnota: {}".format(key,z[key])

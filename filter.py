@@ -11,3 +11,9 @@ filter
 # filter out nums <=0
 f = list(filter(lambda x:x<=0, nums))
 print(f)
+
+# filter only even numbers
+x = list(filter(lambda x: x % 2 == 0, nums))
+print(x)
+
+
