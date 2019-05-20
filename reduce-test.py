@@ -14,7 +14,7 @@ print(nums)
 l = reduce((lambda x,y:x+y),nums)
 print("reduce and lambda: ",l)
 
-# same solution
+# same solution with sum() function
 y = sum(nums)
 print("sum function: ",y)
 
