@@ -24,7 +24,7 @@ def sumar(x):
     """
     Sumarize all items in list
     :param x: list with items to sumarize
-    :return: int sumarized parameter x
+    :return: int sumarized input parameter
     """
     suma = 0
     for i in x:
