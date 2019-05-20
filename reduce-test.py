@@ -14,13 +14,12 @@ print(nums)
 l = reduce((lambda x,y:x+y),nums)
 print("reduce and lambda: ",l)
 
-# same functionality
+# same solution
 y = sum(nums)
 print("sum function: ",y)
 
 
-# same with function
-
+# same solution with function
 def sumar(x):
     """
     Sumarize all items in list
@@ -32,4 +31,4 @@ def sumar(x):
         suma+=i
     return suma
 
-print("same resolution with function sumar():",sumar(nums))
+print("same solution with function sumar():",sumar(nums))
