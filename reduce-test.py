@@ -6,6 +6,8 @@ to sequential pairs of values in a list. For example, if you wanted
 to compute the product of a list of integers.
 """
 
+debug = 1   # 1 for debug, 0 for
+
 # list of nums [1, 10, 19, 28, 37, 46, 55, 64, 73, 82, 91]
 nums = [x for x in range(1,100,9)]
 
@@ -39,7 +41,8 @@ def sumar(x):
         except TypeError:   # if values are not numbers
             err_counter +=1
             continue
-    print("počet chyb:", err_counter)
+    if debug:
+        print("počet chyb:", err_counter)
     return suma
 
 print("same solution with function sumar():",sumar(nums))
