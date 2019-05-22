@@ -8,16 +8,16 @@ def say(*args):
     print("\n")
 
 
-def inccounter(start):
-    step=1
+def inccounter(start,end):
+    step = 1
     cur = start
     while True:
         yield cur
         cur += step
-        if cur >=100:
+        if cur > end:
             break
 
-for i in inccounter(5):
+for i in inccounter(1,10):
     say(i)
 
 
