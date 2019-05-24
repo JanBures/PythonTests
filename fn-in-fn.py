@@ -41,12 +41,11 @@ def domath(func):
         return add
     elif func == "sub":
         return sub
-    else:
-        pass
+
 
 
 a = domath("add")
 print(a(5,2))
 
-m = domath("susb")
+m = domath("sub")
 print(m(5,2))
