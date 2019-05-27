@@ -8,7 +8,7 @@ class Regexp:
         :param content: string s email adresami
         :return: list očištěných adres
         """
-        mail_regex = re.compile('[a-zA-Z]{1}[-_\w\.]+@[-\w\.]+\.[a-zA-Z0-9]{1,3}')
+        mail_regex = re.compile('[a-zA-Z]1[-_\w\.]+@[-\w\.]+\.[a-zA-Z0-9]{1,3}')
         maily = mail_regex.findall(content)
         return maily
 
